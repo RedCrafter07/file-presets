@@ -1,0 +1,11 @@
+FROM node:17.7.2
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+CMD [ "npm", "run", "start" ]
