@@ -9,7 +9,9 @@ export default async function file() {
 		watcher.onDidCreate(async uri => {
 			let presetsFileDir: string | string[] = __dirname.split('\\');
 			presetsFileDir.pop();
-			presetsFileDir.pop();
+			if (presetsFileDir.includes('utils')) {
+				presetsFileDir.pop();
+			}
 			presetsFileDir = presetsFileDir.join('\\');
 
 			console.log(`created ${uri.fsPath}`);
@@ -22,6 +24,7 @@ export default async function file() {
 			if (!preset) {
 				return;
 			}
+
 			vscode.window
 				.showQuickPick([ `Use preset for ${fileName}`, 'Ignore' ], {
 					canPickMany: false
