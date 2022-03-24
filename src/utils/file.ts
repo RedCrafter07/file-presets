@@ -10,7 +10,7 @@ export default async function file() {
 			let presetsFileDir: string | string[] = __dirname.split('\\');
 			presetsFileDir.pop();
 			presetsFileDir.pop();
-			presetsFileDir = presetsFileDir.join('\\') + '\\src';
+			presetsFileDir = presetsFileDir.join('\\');
 
 			console.log(`created ${uri.fsPath}`);
 
@@ -41,6 +41,7 @@ export default async function file() {
 									file.toString()
 								)
 							]);
+
 							vscode.workspace.applyEdit(workspaceEdit);
 							vscode.workspace.saveAll(false);
 							break;
