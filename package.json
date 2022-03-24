@@ -11,6 +11,7 @@
 	"main": "./out/extension.js",
 	"publisher": "RedCrafter07",
 	"icon": "icon.png",
+	"license": "GPL-3.0-or-later",
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
