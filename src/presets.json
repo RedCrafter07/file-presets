@@ -1,0 +1,21 @@
+{
+	"files": [
+		{
+			"files": [ "Dockerfile" ],
+			"presetFile": "./presets/Dockerfile"
+		},
+		{
+			"files": [ "docker-compose.yml", "docker-compose.yaml" ],
+			"presetFile": "./presets/docker-compose.yml"
+		},
+		{
+			"files": [ "tsconfig.json" ],
+			"presetFile": "./presets/tsconfig.json"
+		}
+	],
+	"workspace": [
+		{
+			"name": "node-docker"
+		}
+	]
+}
