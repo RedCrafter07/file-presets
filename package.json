@@ -2,7 +2,7 @@
 	"name": "file-presets",
 	"displayName": "File Presets",
 	"description": "A simple extension which provides some file presets",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.65.0"
 	},
