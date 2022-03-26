@@ -8,10 +8,10 @@ export default async function file() {
 		let watcher = vscode.workspace.createFileSystemWatcher(new vscode.RelativePattern(folders[0], '*'));
 		watcher.onDidCreate(async uri => {
 			let presetsFileDir: string | string[] = __dirname.split('\\');
-			presetsFileDir.pop();
 			if (presetsFileDir.includes('utils')) {
 				presetsFileDir.pop();
 			}
+			presetsFileDir.pop();
 			presetsFileDir = presetsFileDir.join('\\');
 
 			console.log(`created ${uri.fsPath}`);
