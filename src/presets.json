@@ -11,6 +11,11 @@
 		{
 			"files": [ "tsconfig.json" ],
 			"presetFile": "./presets/tsconfig.json"
+		},
+		{
+			"files": [ "" ],
+			"endings": [ "html", "ejs" ],
+			"presetFile": "./presets/index.html"
 		}
 	],
 	"workspace": [
