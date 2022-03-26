@@ -12,6 +12,38 @@
 	"publisher": "RedCrafter07",
 	"icon": "icon.png",
 	"license": "GPL-3.0-or-later",
+	"contributes": {
+		"configuration": {
+			"title": "File Presets",
+			"properties": {
+				"file-presets.endingPresets": {
+					"default": true,
+					"description": "Use presets for file endings. Examples: .html, .ejs",
+					"title": "Ending Presets",
+					"type": "boolean"
+				},
+				"file-presets.filePresets": {
+					"default": true,
+					"title": "File Presets",
+					"description": "Use presets for specific files. Examples: Dockerfile, tsconfig.json",
+					"type": "boolean"
+				},
+				"file-presets.forcePresets": {
+					"default": false,
+					"title": "Force presets",
+					"description": "If activated, presets will be accepted automatically.",
+					"type": "boolean"
+				},
+				"file-presets.conflict": {
+					"title": "Conflict",
+					"description": "Which preset to use if there's a conflict, so there's a normal and ending preset. \nInfo: Other options then \"Ask\" will overwrite the popup asking for preset usage.",
+					"type": "string",
+					"enum": [ "Ask", "Ending", "Normal" ],
+					"default": "Ask"
+				}
+			}
+		}
+	},
 	"scripts": {
 		"vscode:prepublish": "npm run esbuild-base -- --minify",
 		"esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
