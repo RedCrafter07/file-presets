@@ -20,3 +20,6 @@ No issues found yet!
 ### 0.0.1
 
 Initial release of file-presets with some basic features and three preset files
+
+### v0.0.2
+HTML preset and file ending preset functionality
